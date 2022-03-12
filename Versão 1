@@ -1,20 +1,20 @@
 programa {
 	funcao inicio() {
-		
+
 //VARIÁVEIS		
     //Nome: valor inserido pelo usuário.
     //Resposta: valor inserido pelo usuário; 
     //carteira: saldo que é atualizado conforme o desempenho no jogo
     //saldoinicial: valor inicial concedido ao usuário. Constante pré-estabelecida.
-    
+
     	inteiro resposta
 		inteiro play
 		inteiro desafiofinal
 		inteiro carteira = 0
 		cadeia nome
 		inteiro saldoinicial = 500
-		
-    	
+
+
 //BOAS VINDAS E REGRAS
 
     	escreva("++++++++ QUIZ PREMIADO ++++++++")
@@ -26,40 +26,40 @@ programa {
     	escreva("\n+++++ REGRAS +++++ ")
     	escreva("\n-- Você inicia o jogo com  R$ 500. \n-- O saldo pode ser alterado conforme o desempenho no jogo.")
     	escreva("\n-- Para cada erro, é descontada a metade do seu saldo. \n-- Para cada acerto, o saldo é dobrado.")
-    	
+
 //MENU INICIAL
 
     	escreva("\nAperte 1 para COMEÇAR!!!\n")
             leia(play)
                 se(play == 1) {
-                
+
 
 //PERGUNTA 1
         escreva("\nSALDO DA CARTEIRA: R$ ", saldoinicial)
-        
-    	escreva("\n\n[PERGUNTA 1] \nQuem descobriu o Brasi?  \n\n1: Pedro Alvares Cabral  \n2: Jade Picon")
-    	    escreva("\nRESPOSTA [Marque 1 ou 2]: ")
+
+    	escreva("\n\n[PERGUNTA 1] \nEm que período da pré-história o fogo foi descoberto?  \n\n1: Neolítico  \n2: Paleolítico \n3 - Idade dos Metais \n4 - Idade Média")
+    	    escreva("\nRESPOSTA [Marque 1, 2, 3 ou 4]: ")
     	        leia(resposta)
-    	 
-    	 se(resposta==1) {
+
+    	 se(resposta==2) {
     	       escreva ("Você acertou! Seu saldo da carteira foi dobrado!")
     	            carteira = saldoinicial*2
     	                escreva("\nSALDO DA CARTEIRA: R$ ", carteira)
-    	                
+
     	 } senao { 
     	     escreva("Resposta incorreta. Seu saldo foi reduzido à metade.")
     	        carteira = saldoinicial / 2
     	            escreva( "\nSALDO DA CARTEIRA: R$ ", carteira)
     	 }
             limpa()
-            
+
 //PERGUNTA 2    	 
     	 escreva("SALDO DA CARTEIRA: R$ ", carteira)
-    	 escreva("\n\n[PERGUNTA 2] \nQuanto é 1 + 1?  \n\n1: DOIS \n2: ONZE")
-    	 escreva("\nRESPOSTA [Marque 1 ou 2]: ")
+    	 escreva("\n\n[PERGUNTA 2] \nAproximadamente, quanto tempo leva para a luz do Sol chegar à Terra?  \n\n1 - 11 minutos \n2 - 5 minutos \n3 - Imediatamente \n4 - 8 minutos")
+    	 escreva("\nRESPOSTA [Marque 1, 2, 3 ou 4]: ")
     	    leia(resposta)
-    	 
-    	    se(resposta==1){
+
+    	    se(resposta==4){
     	        escreva("Você acertou novamente! Seu saldo da carteira foi dobrado!")
     	            carteira = carteira*2
     	                escreva("\nSALDO DA CARTEIRA: R$ ", carteira)
@@ -69,13 +69,13 @@ programa {
     	                escreva( "\nSALDO DA CARTEIRA: R$ ", carteira)
     	 }
     	    limpa()
-    	    
+
 //PERGUNTA 3
     	 escreva("SALDO DA CARTEIRA: R$ ", carteira)
-    	 escreva("\n\n[PERGUNTA 3] \nQual é a cor do S vermelho da Perdigão? \n\n1 - Branco \n2 - Vermelho. \n3 - Não tem S em Perdigão.")
-    	    escreva("\nRESPOSTA [Marque 1 , 2 ou 3]: ")
+    	 escreva("\n\n[PERGUNTA 3] \nQual é a cor do S vermelho da Perdigão? \n\n1 - Branco \n2 - Vermelho \n3 - Não tem S em Perdigão \n4- Amarelo")
+    	    escreva("\nRESPOSTA [Marque 1 , 2, 3 ou 4]: ")
     	        leia(resposta)
-    	 
+
     	    se(resposta==3) {
     	        escreva("\nVocê acertou! Seu saldo da carteira foi dobrado!")
     	          carteira = carteira*2
@@ -86,14 +86,14 @@ programa {
     	                escreva("SALDO DA CARTEIRA: R$ ", carteira)
     	    }
     	    limpa()
-    	    
+
 //PERGUNTA 4    
             escreva("SALDO DA CARTEIRA: R$ ", carteira)
-    	     	 escreva("\n\n[PERGUNTA 4] \nA mãe de Maria tem 5 filhas: Pata, Peta, Pita, Pota... Qual é o nome da 5ª filha? \n\n1 - Maria \n2 - Patati")
-    	       escreva("\nRESPOSTA [Marque 1 ou 2]: ")
+    	     	 escreva("\n\n[PERGUNTA 4] \nO que a palavra 'legend' significa em português? \n\n1 - Legenda \n2 - História \n3 - Conto \n4 - Lenda")
+    	       escreva("\nRESPOSTA [Marque 1, 2, 3 ou 4]: ")
     	         leia(resposta)
-    	 
-    	    se(resposta==1) {
+
+    	    se(resposta==4) {
     	        escreva("\nVocê acertou! Seu saldo da carteira foi dobrado!")
     	          carteira = carteira*2
     	            escreva("\nSALDO DA CARTEIRA: R$ ", carteira)
@@ -109,7 +109,7 @@ programa {
     	     	 escreva("\n\n[PERGUNTA 5] \nQual é a capital do Brasil? \n\n1 - Brasília \n2 - Rio de Janeiro")
     	    escreva("\nRESPOSTA [Marque 1 ou 2]: ")
     	        leia(resposta)
-    	 
+
     	    se(resposta == 1) {
     	        escreva("\nVocê acertou! Seu saldo da carteira foi dobrado!")
     	          carteira = carteira*2
@@ -120,6 +120,88 @@ programa {
     	            escreva("SALDO DA CARTEIRA: R$ ", carteira)
     	    }
             limpa()
+            
+//PERGUNTA 6
+            escreva("SALDO DA CARTEIRA: R$ ", carteira)
+    	     	 escreva("\n\n[PERGUNTA 6] \nQual é a maior região metropolitana do Nordeste? \n\n1 - Região Metropolitana de Salvador \n2 - Região Metropolitana de São Luís \n 3-Região Metropolitana de Fortaleza \n4 - Região Metropolitana de Recife")
+    	    escreva("\nRESPOSTA [Marque 1, 2, 3 ou 4]: ")
+    	        leia(resposta)
+
+    	    se(resposta == 3) {
+    	        escreva("\nVocê acertou! Seu saldo da carteira foi dobrado!")
+    	          carteira = carteira*2
+    	            escreva("\nSALDO DA CARTEIRA: R$ ", carteira)
+    	    } senao {
+    	        escreva("Resposta incorreta. Seu saldo foi reduzido pela metade.")
+    	        carteira = carteira / 2
+    	            escreva("SALDO DA CARTEIRA: R$ ", carteira)
+    	    }
+            limpa()
+//PERGUNTA 7
+            escreva("SALDO DA CARTEIRA: R$ ", carteira)
+    	     	 escreva("\n\n[PERGUNTA 7] \nQuem é o autor da frase 'Penso, logo existo.'? \n\n1 - Platão \n2 - Galileu Galilei \n3 - René Descartes \n 4-Sócrates")
+    	    escreva("\nRESPOSTA [Marque 1, 2, 3 ou 4]: ")
+    	        leia(resposta)
+
+    	    se(resposta == 3) {
+    	        escreva("\nVocê acertou! Seu saldo da carteira foi dobrado!")
+    	          carteira = carteira*2
+    	            escreva("\nSALDO DA CARTEIRA: R$ ", carteira)
+    	    } senao {
+    	        escreva("Resposta incorreta. Seu saldo foi reduzido pela metade.")
+    	        carteira = carteira / 2
+    	            escreva("SALDO DA CARTEIRA: R$ ", carteira)
+    	    }
+            limpa()
+//PERGUNTA 8
+            escreva("SALDO DA CARTEIRA: R$ ", carteira)
+    	     	 escreva("\n\n[PERGUNTA 8] \nQual é o menor país do mundo em extensão territorial? \n\n1 - San Marino \n2 - Vaticano \n3 - Belize \n4 - El Salvador")
+    	    escreva("\nRESPOSTA [Marque 1, 2, 3 ou 4]: ")
+    	        leia(resposta)
+
+    	    se(resposta == 2) {
+    	        escreva("\nVocê acertou! Seu saldo da carteira foi dobrado!")
+    	          carteira = carteira*2
+    	            escreva("\nSALDO DA CARTEIRA: R$ ", carteira)
+    	    } senao {
+    	        escreva("Resposta incorreta. Seu saldo foi reduzido pela metade.")
+    	        carteira = carteira / 2
+    	            escreva("SALDO DA CARTEIRA: R$ ", carteira)
+    	    }
+            limpa()
+//PERGUNTA 9
+            escreva("SALDO DA CARTEIRA: R$ ", carteira)
+    	     	 escreva("\n\n[PERGUNTA 9] \nEscolha a alternativa onde a palavra esteja escrita corretamente: \n\n1 - Meteorologia \n2 - Metereologia \n3 - Mereotologia \n4 - Mereteologia")
+    	    escreva("\nRESPOSTA [Marque 1, 2, 3 ou 4]: ")
+    	        leia(resposta)
+
+    	    se(resposta == 1) {
+    	        escreva("\nVocê acertou! Seu saldo da carteira foi dobrado!")
+    	          carteira = carteira*2
+    	            escreva("\nSALDO DA CARTEIRA: R$ ", carteira)
+    	    } senao {
+    	        escreva("Resposta incorreta. Seu saldo foi reduzido pela metade.")
+    	        carteira = carteira / 2
+    	            escreva("SALDO DA CARTEIRA: R$ ", carteira)
+    	    }
+            limpa()
+//PERGUNTA 10
+            escreva("SALDO DA CARTEIRA: R$ ", carteira)
+    	     	 escreva("\n\n[PERGUNTA 10] \nAtualmente, quantos elementos químicos a tabela periódica possui? \n\n1 - 105 \n2 - 250 \n3 - 50 \n4 - 118")
+    	    escreva("\nRESPOSTA [Marque 1, 2, 3 ou 4]: ")
+    	        leia(resposta)
+
+    	    se(resposta == 4) {
+    	        escreva("\nVocê acertou! Seu saldo da carteira foi dobrado!")
+    	          carteira = carteira*2
+    	            escreva("\nSALDO DA CARTEIRA: R$ ", carteira)
+    	    } senao {
+    	        escreva("Resposta incorreta. Seu saldo foi reduzido pela metade.")
+    	        carteira = carteira / 2
+    	            escreva("SALDO DA CARTEIRA: R$ ", carteira)
+    	    }
+            limpa()
+        
 //PERGUNTA DESAFIO FINAL
             escreva("SALDO DA CARTEIRA ATÉ O MOMENTO: R$ ", carteira)
             escreva("\n\n[[[[ DESAFIO FINAL ]]]] \n Você pode nesse momento triplicar seu saldo atual caso acerte a pergunta decisiva, ou perder tudo caso erre a questão.")
@@ -130,29 +212,29 @@ programa {
 //caso o usuário opte em fazer o desafio final
 
                     se(desafiofinal == 1) {
-    
-    	     	 escreva("\n\n[DESAFIO FINAL] \nQual é a sigla do estado de Roraima? \n\n1 - RR \n2 - RO")
+
+    	     	 escreva("\n\n[DESAFIO FINAL] \nQual é a montanha mais alta do Brasil? \n\n1 - Pico da Neblina \n2 - Monte Roraima \n3 - Pico da Bandeira \n4 - Pico 31 de março")
     	    escreva("\nRESPOSTA [Marque 1 ou 2]: ")
     	        leia(resposta)
-    	 
+
     	    se(resposta == 1) {
     	        escreva("\nVocê acertou! Seu saldo da carteira foi triplicado!")
     	          carteira = carteira*3
     	            escreva("\nSALDO DA CARTEIRA: R$ ", carteira)
     	    } senao {
-    	        escreva("Resposta incorreta. Seu saldo foi reduzido pela metade.")
+    	        escreva("Desafio final perdido. Seu saldo foi zerado.")
     	        carteira = carteira - carteira
     	            escreva("SALDO DA CARTEIRA: R$ ", carteira)
     	    }            
 // caso o usuário não opte em fazer o desafio final            
                 } senao {
-                    escreva("\nPARABÉNS!! Seu prêmio final é de: R$", carteira)
+                    escreva("\nParabéns, ", nome, "!! Desafio final vencido! Seu prêmio final é de: R$", carteira)
                 }
  // caso o usuário não aperte 1 no início do algoritmo   
                 }senao {
                     escreva("\nFIM DE JOGO.")
                 }
-                
+
 
     	 }	// FIM FUNÇÃO INICIO() 
 	}
